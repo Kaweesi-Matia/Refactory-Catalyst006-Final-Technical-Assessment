@@ -1,0 +1,138 @@
+extends layout
+block content
+    .form-row
+        div.row.form-group
+            img(src='images/im2.png')
+        div.row.form-group
+            img(src='images/im2.png')
+               
+
+        
+                   
+     
+    div.bg-light
+        header.card-header
+            h6.card-title.card-title.text-center.font-weight-bold.text-primary Ministry of Health
+            h5.card-title.card-title.text-center.font-weight-bold.text-primary Covid 19(CORONA VIRUS) 
+            h6.card-title.card-title.text-center.font-weight-bold.text-primary Virus-Test Registration Form
+            h3.kaweesi Registration Was Successful
+        br 
+        form#needs-validation(novalidate="" method="POST" action='/register')   
+            div.container       
+                .form-row
+                    div.col.form-group
+                        label.font-weight-bold Surname
+                        input.form-control(name="Surname" placeholder='' required pattern="^(?=.*[A-Z])(?=.*[a-z]).{1,16}$")
+                        .invalid-feedback.
+                            This field is required
+                    div.col.form-group
+                        label.font-weight-bold Given name
+                        input.form-control(name="Givenname" placeholder='' required pattern="^(?=.*[A-Z])(?=.*[a-z]).{1,16}$")
+                        .invalid-feedback.
+                            This field is required
+                    //- div.col.form-group
+                    //-     label.font-weight-bold gender 
+                    //-     select.form-control(name="gender" required )
+                    //-         option(value="") Select produce type
+                    //-         option(value="Male")  Male
+                    //-         option(value="Female") Female
+                    //-         .invalid-feedback.
+                    //-             Please enter a password.
+                    //- div.col.form-group
+                    //-     label.font-weight-bold Unique ID
+                    //-     input.form-control(name="Givenname" placeholder='' required)
+                    //-     .invalid-feedback.
+                    //-         Enter ID as given by FarmerOne.
+                    
+                .form-row
+                    div.col.form-group
+                        label.font-weight-bold Date of birth
+                        input.form-control(type='text' placeholder='Date of birth' onfocus='(this.type=\'date\')' name="Dateofbirth" required)
+                        .invalid-feedback.
+                            Select Date of birth
+    
+                    div.col.form-group
+                        label.font-weight-bold Place of residence
+                        input.form-control(name="placeofresidence" placeholder='' required pattern="^(?=.*[A-Z])(?=.*[a-z]).{1,20}$")
+                        .invalid-feedback.
+                            This field is required
+                    //- div.col.form-group
+                    //-     label.font-weight-bold Date
+                    //-     input.form-control(type='text' placeholder='Date of registration' onfocus='(this.type=\'date\')' name="registrationDate" required)
+                    //-     .invalid-feedback.
+                    //-         Enter Date of registration
+                .form-row
+                    div.col.form-group
+                        label.font-weight-bold Occupation
+                        input.form-control(name="occupation" placeholder='' required pattern="^(?=.*[A-Z])(?=.*[a-z]).{5,50}$")
+                        .invalid-feedback.
+                            This field is required
+                    div.col.form-group
+                        label.font-weight-bold Nationality
+                        input.form-control(name="Nationality" placeholder='' required pattern="^(?=.*[A-Z])(?=.*[a-z]).{5,20}$")
+                        .invalid-feedback.
+                            This field is required
+
+                            
+                .form-row
+                    div.col.form-group
+                        label.font-weight-bold gender 
+                        select.form-control(name="gender" required )
+                            option(value="") Select gender
+                            option(value="Male")  Male
+                            option(value="Female") Female
+                            .invalid-feedback.
+                                Select gender
+                
+               
+
+                .form-row
+                    div.col.form-group
+                        label.font-weight-bold category 
+                        select.form-control(name="category" required)
+                            option(value="") Select category
+                            option(value="Pickup")  Pickup
+                            option(value="Home delivery") Home delivery
+                            .invalid-feedback.
+                                select patient category
+                    //- div.col.form-group
+                    //-     label.font-weight-bold Unit price
+                    //-     input.form-control(type='number' placeholder='Unit price in Ugshs e.g 100.000'  name="unitprice" required pattern="[0-9]" min="1")
+                    //-     .invalid-feedback.
+                    //-         Enter the unit price (Ugsh) e.g 100.000
+                    //- div.col.form-group
+                    //-     label.font-weight-bold Quantity
+                    //-     input.form-control(type='number' placeholder='Quantity' name="quantity" required min="1")
+                    //-     .invalid-feedback.
+                    //-         Enter the quantity e.g 1,2,3...
+            
+                
+                //- div.form-row
+                //-     div.col.form-group
+                //-         label.font-weight-bold Mode of delivery 
+                //-         select.form-control(name="modeofdelivery" required)
+                //-             option(value="") Select delivery mode
+                //-             option(value="Pickup")  Pickup
+                //-             option(value="Home delivery") Home delivery
+                //-             .invalid-feedback.
+                //-                 Please enter a password.
+                        
+                    div.col.form-group
+                        label.font-weight-bold Mode of payment
+                        select.form-control(name="modeofpayment" required)
+                            option(value="") Select payment method
+                            option(value="Cash")  Cash
+                            option(value="Mobile money") Mobile money
+                            .invalid-feedback.
+                                Please enter a password.
+
+                        
+                //- div.form-row
+                //-     div.col.form-group
+                //-         label.font-weight-bold Address
+                //-         textarea.form-control#exampleFormControlTextarea1(placeholder='Activities involved' rows='2' name="address" required pattern="[a-zA-Z0-9]+")
+                //-         .invalid-feedback.
+                //-             Your address is required without any special characters e.g !,@..
+                div.form-row
+                    div.col.form-group
+                        button.btn.btn-success.btn-block.btn.waves-effect.waves-light register
